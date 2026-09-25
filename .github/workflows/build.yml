@@ -43,7 +43,8 @@ jobs:
           make -C kpm clean all \
             KP_DIR="$GITHUB_WORKSPACE/KernelPatch" \
             SDK_DIR="$ANDROID_HOME" \
-            NDK_VERSION="$ANDROID_NDK_VERSION"
+            NDK_VERSION="$ANDROID_NDK_VERSION" \
+            TOOLCHAIN="$ANDROID_HOME/ndk/$ANDROID_NDK_VERSION/toolchains/llvm/prebuilt/linux-x86_64/bin"
 
       - name: Build APK
         run: |
